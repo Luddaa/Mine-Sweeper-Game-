@@ -29,3 +29,9 @@ body{
    background:rgba(169, 169, 169, 0.356); 
 }
 
+#flag-button{
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+    background-color: lightgray;
+}

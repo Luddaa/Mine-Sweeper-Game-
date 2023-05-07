@@ -13,7 +13,7 @@ window.onload = function(){
 
 function startGame() {
     document.getElementById("mines-count").innerText = mineCount;
-
+    document.getElementById("flag-button").addEventListener("click", setFlag);
 
     //fill board up
     for (let i = 0; i < rows; i++) {
@@ -21,6 +21,7 @@ function startGame() {
          for (let a = 0; a < columns; a++) {
             let tile = document.createElement("div");
             tile.id=i.toString() + "-" + a.toString();
+            tile.addEventListener("click",clickTile);
             document.getElementById("board").append(tile);
             row.push(tile);
         }
@@ -28,3 +29,29 @@ function startGame() {
     }
     console.log(board);
 }
+//setting flag up
+
+function setFlag(){
+    if (flagEnabled){
+        flagEnabled = false;
+        document.getElementById("flag-button").style.backgroundColor = "lightgray";
+    }
+    else{
+        flagEnabled = true;
+        document.getElementById("flag-button").style.backgroundColor = "darkgray";
+    }
+}
+
+function clickTile(){
+
+    let tile = this;
+    if (flagEnabled){
+        if(tile.innerText == ""){
+            tile.innerText= "🚩";
+        }
+        else if (tile.innerText =="🚩"){
+            tile.innerText= "";
+        }
+    }
+}
+
