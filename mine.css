@@ -2,7 +2,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
-    background-color: rgb(101, 117, 98);
+    background-color:#2e2c2c
 }
 
 #board{
@@ -13,6 +13,7 @@ body{
     margin:0 auto;
     display: flex;
     flex-wrap:wrap ;
+    
 }
 
 #board div{
@@ -24,10 +25,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+ 
 }
 
 .tile-clicked {
-    background-color: rgb(90, 168, 219);
+    background-color: rgba(40, 99, 177, 0.664);
 }
 
 #flag-button{
@@ -35,4 +37,25 @@ body{
     height: 50px;
     font-size: 30px;
     background-color: lightgray;
+}
+ img{
+    width:15%;
+    border: 2x solid black;
+    
+ }
+
+h2{
+    background-color: rgb(174, 175, 174);  
+    border: 2px solid rgb(0, 0, 0);      
+    padding: 10px;      
+    word-wrap: break-word;      
+    font-size: 20px; 
+}
+
+h3{
+    color: rgb(226, 226, 226)
+}
+
+h1{
+   color:rgb(226, 226, 226) 
 }
