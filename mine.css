@@ -2,7 +2,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
-    background-color:#2e2c2c
+    background-color:#2c3f34
 }
 
 #board{
@@ -29,7 +29,7 @@ body{
 }
 
 .tile-clicked {
-    background-color: rgba(40, 99, 177, 0.664);
+    background:linear-gradient(rgb(19, 121, 139),rgb(88, 153, 51));
 }
 
 #flag-button{
@@ -53,9 +53,14 @@ h2{
 }
 
 h3{
-    color: rgb(226, 226, 226)
+    color: rgb(0, 0, 0)
 }
 
 h1{
-   color:rgb(226, 226, 226) 
+   color:rgb(5, 2, 2) 
 }
+body {
+    background: url('./background.jpg');
+    background-size: cover;
+
+  }

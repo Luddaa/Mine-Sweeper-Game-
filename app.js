@@ -171,5 +171,5 @@ function checkTile(r, c) {
 }
  
 //made understnanding some concepts easier:
-https://www.youtube.com/watch?v=kBMnD_aElCQ&list=LL&index=7
-https://www.youtube.com/watch?v=rxdGAKRndz8&list=LL&index=15
+//https://www.youtube.com/watch?v=kBMnD_aElCQ&list=LL&index=7
+//https://www.youtube.com/watch?v=rxdGAKRndz8&list=LL&index=15
