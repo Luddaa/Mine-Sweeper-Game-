@@ -1,12 +1,13 @@
 let board = [];
 let rows = 8;
 let columns = 8;
-let minesCount = 1;
+let minesCount = 5;
 let minesLocation = []; 
 let tilesClicked = 0; 
 let flagEnabled = false;
 let gameOver = false;
-
+//Guided me through https://www.youtube.com/watch?v=AfhfAxKFP-s&list=LL&index=18
+//help me understand the process
 window.onload = function() {
     startGame();
 }
@@ -14,7 +15,7 @@ window.onload = function() {
 function setMines(){
    // minesLocation.push("2-2");
 
-
+//took code to randomized mines from https://github.com/ImKennyYip/Minesweeper/blob/master/minesweeper.js
     let minesLeft = minesCount;
     while (minesLeft > 0) { 
         let r = Math.floor(Math.random() * rows);
@@ -81,7 +82,8 @@ function clickTile(){
     }
 
     if(minesLocation.includes(tile.id)){
-        alert("Game Over");
+        document.getElementById("mines-count").innerText = "Boom!! Try Again";
+        //alert("Game Over");
         gameOver = true;
         revealMines();
         return;
@@ -153,7 +155,7 @@ function checkMine(r, c) {
     }
 
     if (tilesClicked == rows * columns - minesCount) {
-        document.getElementById("mines-count").innerText = "Cleared";
+        document.getElementById("mines-count").innerText = "Cleared You Win";
         gameOver = true;
     }
 
@@ -167,3 +169,7 @@ function checkTile(r, c) {
     }
     return 0;
 }
+ 
+//made understnanding some concepts easier:
+https://www.youtube.com/watch?v=kBMnD_aElCQ&list=LL&index=7
+https://www.youtube.com/watch?v=rxdGAKRndz8&list=LL&index=15
