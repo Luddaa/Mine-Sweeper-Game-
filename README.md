@@ -3,7 +3,7 @@ Logic puzzle video games like Minesweeper are typically played on personal compu
 
 ## Deployment
 
-The web game is deployed at <YOUR DEPLOYED GITHUB.IO URL GOES HERE>.
+The web game is deployed at <https://luddaa.github.io/Mine-Sweeper-Game-/.
 
 
 ## Project Description
