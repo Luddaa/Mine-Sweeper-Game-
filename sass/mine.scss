@@ -1,0 +1,74 @@
+// SCSS variables
+$body-font: 'Arial, Helvetica, sans-serif';
+$board-bg-color: #2c3f34;
+$board-border-color: rgb(59, 57, 53);
+$board-background-color: rgb(187, 181, 181);
+$tile-border-color: white;
+$tile-font-size: 30px;
+$tile-background-start: rgb(19, 121, 139);
+$tile-background-end: rgb(88, 153, 51);
+$flag-button-bg-color: lightgray;
+$image-border-color: black;
+$h2-bg-color: rgb(174, 175, 174);
+$h2-border-color: rgb(0, 0, 0);
+$h2-padding: 10px;
+$h2-font-size: 20px;
+$h3-color: rgb(0, 0, 0);
+$h1-color: rgb(5, 2, 2);
+
+// SCSS mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin gradient-background($start, $end) {
+  background: linear-gradient($start, $end);
+}
+
+// SCSS functions
+@function calculate-width($num-cols, $tile-size, $tile-gap) {
+  @return ($num-cols * $tile-size) + (($num-cols - 1) * $tile-gap);
+}
+
+@function darken-color($color, $amount) {
+  @return darken($color, $amount);
+}
+
+// Nested selectors with SCSS operators and flow control directives
+body {
+  font-family: $body-font;
+  font-weight: bold;
+  text-align: center;
+  background-color: $board-bg-color;
+  background: url('./background.jpg');
+  background-size: cover;
+}
+
+#board {
+  width: 400px;
+  height: 400px;
+  border: 10px solid $board-border-color;
+  background-color: $board-background-color;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    width: 46px;
+    height: 48px;
+    border: 1px solid $tile-border-color;
+    font-size: $tile-font-size;
+    @include flex-center;
+
+    &.tile-clicked {
+      @include gradient-background($tile-background-start, $tile-background-end);
+    }
+  }
+
+  $num-columns: 8;
+  $tile-size: 48px;
+  $tile-gap: 1px;
+  width: #{calculate-width($num-columns, $tile-size, $tile-gap)};
+}
